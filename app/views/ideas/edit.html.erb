@@ -1,0 +1,25 @@
+<%= form_for @idea do |f| %>
+    <div class="field">
+    <%= f.label :イベント名 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+  <div class="field">
+    <%= f.label :場所 %>
+    <%= f.text_field :place, :size => 30 %>
+  </div>
+  <div class="field">
+    <%= f.label :人数  %>
+    <%= f.number_field :people, :size => 10 %>
+  </div>
+  <div class="field">
+    <%= f.label :感想  %>
+    <%= f.text_area :review, :size => "30x2" %>
+  </div>
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+</div>
+  <%= f.submit "投稿する" %>
+  <% end %>
+  
+  <%= link_to "一覧に戻る", ideas_path %>
